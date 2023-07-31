@@ -1,11 +1,13 @@
 package com.ipsa.entity;
 
 import cn.afterturn.easypoi.excel.annotation.Excel;
+import cn.afterturn.easypoi.excel.annotation.ExcelCollection;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -15,6 +17,6 @@ public class Work implements Serializable {
     private Integer id;
     @Excel(name = "工作名称",needMerge = true)
     private String workName;
-
-    private Double price;
+    @ExcelCollection(name = "该工作下的人员")
+    private List<Person> person;
 }
