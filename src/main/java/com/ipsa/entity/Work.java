@@ -11,9 +11,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Work implements Serializable {
-    @Excel(name = "班级编号", needMerge = true)
+    @Excel(name = "工作编号", needMerge = true)
     private Integer id;
-
+    @Excel(name = "工作名称",needMerge = true)
     private String workName;
+
     private Double price;
 }
